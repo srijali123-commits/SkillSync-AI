@@ -20,7 +20,9 @@ import PersonalizedRecommendations from "../components/dashboard/PersonalizedRec
 import DownloadReport from "../components/dashboard/DownloadReport";
 import WhatIfSimulator from "../components/dashboard/WhatIfSimulator";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://skillsync-ai-87g8.onrender.com";
 
 const ROLES = [
   "Software Engineer", "Frontend Developer", "Backend Developer",
