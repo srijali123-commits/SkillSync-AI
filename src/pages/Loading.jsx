@@ -90,8 +90,7 @@ function Loading() {
         updateStep(2, 60);
 
         // Preserve existing backend API request
-        const response = await fetch(
-          "http://127.0.0.1:5000/api/analyze",
+        const response = await fetch (`${import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"}/api/analyze`,
           {
             method: "POST",
             headers: {
